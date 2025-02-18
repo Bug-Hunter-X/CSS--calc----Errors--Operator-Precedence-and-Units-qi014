@@ -1,0 +1,12 @@
+/* Corrected CSS using calc() with consistent units and explicit operator precedence */
+#element {
+  width: calc((50% - 10px)); /* corrected calculation*/
+  /*Other styles*/
+}
+/* Avoid this kind of calculation without units, parentheses, or consistent units*/
+#anotherElement {
+  width: calc(50% - 10px); /* correct */
+  height: calc(100% - 2rem); /* correct */
+  /*In this case the units are consistent and calculation is correct*/
+  margin: calc( (100px + 20px)/2 ); /* correct */
+} 
